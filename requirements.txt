@@ -1,5 +1,7 @@
-google-api-python-client
-google-auth-httplib2
-google-auth-oauthlib
-beautifulsoup4
+datasets
 python-dotenv
+modal
+trl>=0.9.0
+peft
+torch
+transformers

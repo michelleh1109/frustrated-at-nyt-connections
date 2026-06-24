@@ -1,49 +1,29 @@
-# Secrets & credentials — never commit these
+# Secrets
 .env
 .env.*
 !.env.example
-credentials.json
-token.json
-data/token.json
-*.pickle
-oauth_token*
 
-# Gmail data — private by definition
-data/raw/
-data/cleaned/
-data/eval_holdout/
+# Puzzle data — downloaded from HF, not committed
+src/data/puzzles/
 
-# Trained weights — private (trained on personal emails) and large; use Modal volume
-weights/*.safetensors
-weights/checkpoint_complete
+# Trained weights — stored in Modal Volume
+weights/
+!weights/.gitkeep
+
+# Eval results
+src/eval/results/
 
 # Python
 __pycache__/
 *.py[cod]
-*.pyo
 .venv/
 venv/
-env/
 *.egg-info/
-dist/
-build/
-.eggs/
-
-# Jupyter
-.ipynb_checkpoints/
-*.ipynb_checkpoints
 
 # Modal
 .modal/
 
-# OS
+# OS / IDE
 .DS_Store
-Thumbs.db
-
-# IDE
 .vscode/
 .idea/
-
-# Logs & outputs
-*.log
-eval/results/
